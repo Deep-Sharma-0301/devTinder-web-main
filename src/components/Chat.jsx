@@ -17,7 +17,7 @@ const Chat = () => {
       withCredentials: true,
     });
 
-    console.log(chat.data.messages);
+    // console.log(chat.data.messages);
 
     const chatMessages = chat?.data?.messages.map((msg) => {
       const { senderId, text } = msg;
@@ -82,10 +82,10 @@ const Chat = () => {
             >
               <div className="chat-header">
                 {`${msg.firstName}  ${msg.lastName}`}
-                <time className="text-xs opacity-50"> 2 hours ago</time>
+                <time className="text-xs opacity-50"> </time>
               </div>
               <div className="chat-bubble">{msg.text}</div>
-              <div className="chat-footer opacity-50">Seen</div>
+              {/* <div className="chat-footer opacity-50">Seen</div> */}
             </div>
           );
         })}

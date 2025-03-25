@@ -48,7 +48,7 @@ const Login = () => {
 
   return (
     <div className="flex justify-center my-10">
-      <div className="card bg-base-300 w-96 shadow-xl">
+      <div className="card bg-base-300 w-96 shadow-xl mb-10">
         <div className="card-body">
           <h2 className="card-title justify-center">
             {isLoginForm ? "Login" : "Sign Up"}
@@ -118,8 +118,10 @@ const Login = () => {
             onClick={() => setIsLoginForm((value) => !value)}
           >
             {isLoginForm
-              ? "New User? Signup Here"
-              : "Existing User? Login Here"}
+              ?  <>
+              New User? <strong>Signup Here</strong>
+            </>
+              : <>Existing User? <strong>Login Here</strong></>}
           </p>
         </div>
       </div>

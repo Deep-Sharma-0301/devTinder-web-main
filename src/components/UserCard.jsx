@@ -14,14 +14,15 @@ const UserCard = ({ user }) => {
         {},
         { withCredentials: true }
       );
+      console.log('Sent requuest')
       dispatch(removeUserFromFeed(userId));
     } catch (err) {}
   };
 
   return (
-    <div className="card bg-base-300 w-96 shadow-xl">
-      <figure>
-        <img src={user.photoUrl} alt="photo" />
+    <div className="card bg-base-300 w-96 shadow-xl mb-10">
+      <figure className="overflow-hidden">
+        <img className="h-[30vh] w-full object-contain"src={user.photoUrl} alt="photo" />
       </figure>
       <div className="card-body">
         <h2 className="card-title">{firstName + " " + lastName}</h2>
